@@ -72,11 +72,11 @@ public class Main {
     }
 
     public static boolean isWeekend(Date date) {
-        Calendar c1 = Calendar.getInstance();
-        c1.setTime(date);
-        System.out.println(c1.get(Calendar.DAY_OF_WEEK));
-        if (c1.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY
-                || c1.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY) {
+        Calendar calendar1 = Calendar.getInstance();
+        calendar1.setTime(date);
+        System.out.println(calendar1.get(Calendar.DAY_OF_WEEK));
+        if (calendar1.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY
+                || calendar1.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY) {
             return true;
         } else {
             return false;
