@@ -4,21 +4,8 @@ import entities.*;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Calendar;
-import java.util.Collections;
 import java.util.Date;
-import static java.util.concurrent.TimeUnit.DAYS;
-import javax.xml.crypto.Data;
-import entities.Appliance;
-import entities.Beverage;
-import entities.Cart;
-import entities.Clothing;
-import entities.Food;
-import entities.Product;
-import entities.Size;
 
 public class Main {
     public static void main(String[] args) {
