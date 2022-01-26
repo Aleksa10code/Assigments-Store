@@ -48,19 +48,19 @@ public class Main {
         Beverage beverage2 = new Beverage(expire5, "Guarana", "Guarana", 80.00, 7, today);
         Beverage beverage3 = new Beverage(expire6, "Coca-Cola", "Coca-Cola", 120.00, 10, today);
 
-        Clothing clothing1 = new Clothing(Size.L, "red", "T-Shirt", "Adidas", 23000.00, 1, today);
+        Clothing clothing1 = new Clothing(Size.L, "red", "T-Shirt", "Adidas", 230.00, 1, today);
 
-        Appliance appliance1 = new Appliance("Laptop", productionDate1, 0.3, "Asus ZenBook", "Asus", 120000.00, 1, today);
+        Appliance appliance1 = new Appliance("Laptop", productionDate1, 0.3, "Asus ZenBook", "Asus", 1200.00, 1, today);
 
-        Cart c1 = new Cart();
-        c1.addProduct(food1);
-        c1.addProduct(food2);
-        c1.addProduct(food3);
-        c1.addProduct(beverage1);
-        c1.addProduct(beverage2);
-        c1.addProduct(beverage3);
-        c1.addProduct(clothing1);
-        c1.addProduct(appliance1);
+        Cart cart1 = new Cart();
+        cart1.addProduct(food1);
+        cart1.addProduct(food2);
+        cart1.addProduct(food3);
+        cart1.addProduct(beverage1);
+        cart1.addProduct(beverage2);
+        cart1.addProduct(beverage3);
+        cart1.addProduct(clothing1);
+        cart1.addProduct(appliance1);
 
         LocalDateTime dateAndTimeOfPurchase = LocalDateTime.now();
         DateTimeFormatter formatDateAndTime = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
@@ -68,19 +68,19 @@ public class Main {
 
         System.out.println(formattedDate);
         System.out.println("-------- PRODUCTS -------");
-        for (int i = 0; i < c1.getListBuyProducts().size(); i++) {
-            System.out.println(c1.getListBuyProducts().get(i).getName() + " " + c1.getListBuyProducts().get(i).getBrand());
-            System.out.println(c1.getListBuyProducts().get(i).getQuantity() + " * " + c1.getListBuyProducts().get(i).getPrice() + " = " + c1.getListBuyProducts().get(i).getQuantity() * c1.getListBuyProducts().get(i).getPrice());
-            System.out.println("Discount " + saleClothinAppliances(c1.getListBuyProducts().get(i).getPrice(), isWeekend(today)));
+        for (int i = 0; i < cart1.getListBuyProducts().size(); i++) {
+            System.out.println(cart1.getListBuyProducts().get(i).getName() + " " + cart1.getListBuyProducts().get(i).getBrand());
+            System.out.println(cart1.getListBuyProducts().get(i).getQuantity() + " * " + cart1.getListBuyProducts().get(i).getPrice() + " = " + cart1.getListBuyProducts().get(i).getQuantity() * cart1.getListBuyProducts().get(i).getPrice());
+            System.out.println("Discount " + (cart1.getListBuyProducts().get(i).getPrice() - (saleClothinAppliances(cart1.getListBuyProducts().get(i).getPrice(), isWeekend(today)))));
             System.out.println("************************************************************************");
 
             double sum = 0;
-            for (int j = 0; j < c1.getListBuyProducts().size(); j++) {
-                sum += c1.getListBuyProducts().get(j).getPrice();
-
+            for (int j = 0; j < cart1.getListBuyProducts().size(); j++) {
+                sum = sum + cart1.getListBuyProducts().get(j).getPrice();
             }
-            System.out.println("Total: " + sum);
-            System.out.println("Total Discount: " + (sum - saleClothinAppliances(c1.getListBuyProducts().get(i).getPrice(), isWeekend(today))));
+            System.out.println("SUBTOTAL: " + sum);
+            System.out.println("Total Discount: " + (sum - saleClothinAppliances(cart1.getListBuyProducts().get(i).getPrice(), isWeekend(today))));
+            System.out.println("TOTAL SUM : " + (sum - (sum - saleClothinAppliances(cart1.getListBuyProducts().get(i).getPrice(), isWeekend(today)))));
         }
     }
 
