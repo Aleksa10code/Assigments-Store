@@ -1,21 +1,23 @@
 package entities;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
-public class Clothe extends Product {
+public class Clothing extends Product {
 
     private Size size;
     private String color;
-    private Week week;
-    List<Clothe> clothes = new ArrayList<>();
+    List<Clothing> clothes = new ArrayList<>();
 
-    public Clothe(String name, String brand, double price, int quantity, String purchaseDate, Size size, String color, Week week, List<Clothe> clothes) {
+    public Clothing() {
+
+    }
+
+    protected Clothing(String name, String brand, double price, int quantity, Date purchaseDate, Size size, String color) {
         super(name, brand, price, quantity, purchaseDate);
         this.size = size;
         this.color = color;
-        this.week = week;
-        this.clothes = clothes;
     }
 
     public Size getSize() {
@@ -34,19 +36,11 @@ public class Clothe extends Product {
         this.color = color;
     }
 
-    public Week getWeek() {
-        return week;
-    }
-
-    public void setWeek(Week week) {
-        this.week = week;
-    }
-
-    public List<Clothe> getClothes() {
+    public List<Clothing> getClothes() {
         return clothes;
     }
 
-    public void setClothes(List<Clothe> clothes) {
+    public void setClothes(List<Clothing> clothes) {
         this.clothes = clothes;
     }
 }

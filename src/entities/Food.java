@@ -1,24 +1,28 @@
 package entities;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Food extends Product {
 
-    private String expirationDateForFood;
+    private Date expirationDateForFood;
     List<Food> foods = new ArrayList<>();
 
-    public Food(String name, String brand, double price, int quantity, String purchaseDate, String expirationDateForFood, List<Food> foods) {
-        super(name, brand, price, quantity, purchaseDate);
-        this.expirationDateForFood = expirationDateForFood;
-        this.foods = foods;
+    public Food() {
+
     }
 
-    public String getExpirationDateForFood() {
+    protected Food(String name, String brand, double price, int quantity, Date purchaseDate, Date expirationDateForFood) {
+        super(name, brand, price, quantity, purchaseDate);
+        this.expirationDateForFood = expirationDateForFood;
+    }
+
+    public Date getExpirationDateForFood() {
         return expirationDateForFood;
     }
 
-    public void setExpirationDateForFood(String expirationDateForFood) {
+    public void setExpirationDateForFood(Date expirationDateForFood) {
         this.expirationDateForFood = expirationDateForFood;
     }
 
