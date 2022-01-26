@@ -15,7 +15,14 @@ public class Appliance extends Product {
 
     }
 
-    protected Appliance(String name, String brand, double price, int quantity, Date purchaseDate, String model, Date productionDate, double weight) {
+    public Appliance(String model, Date productionDate, double weight, Week week) {
+        this.model = model;
+        this.productionDate = productionDate;
+        this.weight = weight;
+
+    }
+
+    public Appliance(String model, Date productionDate, double weight, String name, String brand, double price, int quantity, Date purchaseDate) {
         super(name, brand, price, quantity, purchaseDate);
         this.model = model;
         this.productionDate = productionDate;

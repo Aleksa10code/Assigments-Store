@@ -14,7 +14,12 @@ public class Clothing extends Product {
 
     }
 
-    protected Clothing(String name, String brand, double price, int quantity, Date purchaseDate, Size size, String color) {
+    public Clothing(Size size, String color) {
+        this.size = size;
+        this.color = color;
+    }
+
+    public Clothing(Size size, String color, String name, String brand, double price, int quantity, Date purchaseDate) {
         super(name, brand, price, quantity, purchaseDate);
         this.size = size;
         this.color = color;

@@ -10,10 +10,13 @@ public class Beverage extends Product {
     List<Beverage> beverages = new ArrayList<>();
 
     public Beverage() {
-
     }
 
-    protected Beverage(String name, String brand, double price, int quantity, Date purchaseDate, Date expirationDateForBeverage) {
+    public Beverage(Date expirationDateForBeverage) {
+        this.expirationDateForBeverage = expirationDateForBeverage;
+    }
+
+    public Beverage(Date expirationDateForBeverage, String name, String brand, double price, int quantity, Date purchaseDate) {
         super(name, brand, price, quantity, purchaseDate);
         this.expirationDateForBeverage = expirationDateForBeverage;
     }

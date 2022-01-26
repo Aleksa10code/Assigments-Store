@@ -13,7 +13,11 @@ public class Food extends Product {
 
     }
 
-    protected Food(String name, String brand, double price, int quantity, Date purchaseDate, Date expirationDateForFood) {
+    protected Food(Date expirationDateForFood) {
+        this.expirationDateForFood = expirationDateForFood;
+    }
+
+    public Food(Date expirationDateForFood, String name, String brand, double price, int quantity, Date purchaseDate) {
         super(name, brand, price, quantity, purchaseDate);
         this.expirationDateForFood = expirationDateForFood;
     }
