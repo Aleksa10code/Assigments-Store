@@ -2,12 +2,8 @@ package main;
 
 import entities.*;
 
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.Month;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
@@ -77,10 +73,8 @@ public class Main {
         return day.equals(DayOfWeek.SATURDAY) || day.equals(DayOfWeek.SUNDAY);
     }
 
-    public static long daysBetween(Date d1, Date d2) {
-        long diff = d2.getTime() - d1.getTime();
-        long diffDays = diff / (24 * 60 * 60 * 1000);
-        return diffDays;
+    public static int daysBetween(LocalDate d1, LocalDate d2) {
+        return Period.between(d1, d2).getDays();
     }
 
     public static double saleClothinAppliances(double price, boolean week) {
