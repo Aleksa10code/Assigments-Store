@@ -56,13 +56,12 @@ public class Main {
             print(cart1.getListBuyProducts().get(i).getName() + " " + cart1.getListBuyProducts().get(i).getBrand());
             print(cart1.getListBuyProducts().get(i).getQuantity() + " * " + cart1.getListBuyProducts().get(i).getPrice() + " = " + cart1.getListBuyProducts().get(i).getQuantity() * cart1.getListBuyProducts().get(i).getPrice() + " $");
             print("Discount " + calculateDiscount(cart1.getListBuyProducts().get(i)) + " $");
-
             print("");
 
             sum += cart1.getListBuyProducts().get(i).getPrice();
             totalDiscount += calculateDiscount(cart1.getListBuyProducts().get(i));
-
         }
+
         print("************************************************************************");
         print("SUBTOTAL: " + sum + " $");
         print("Total Discount: " + totalDiscount + " $");
