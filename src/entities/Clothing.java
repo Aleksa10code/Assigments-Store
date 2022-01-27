@@ -10,11 +10,11 @@ public class Clothing extends Product {
     private String color;
     private List<Clothing> clothes = new ArrayList<>();
 
-    public Clothing() {
+    protected Clothing() {
 
     }
 
-    public Clothing(Size size, String color) {
+    protected Clothing(Size size, String color) {
         this.size = size;
         this.color = color;
     }

@@ -11,11 +11,11 @@ public class Appliance extends Product {
     private double weight;
     private List<Appliance> appliances = new ArrayList<>();
 
-    public Appliance() {
+    protected Appliance() {
 
     }
 
-    public Appliance(String model, LocalDate productionDate, double weight) {
+    protected Appliance(String model, LocalDate productionDate, double weight) {
         this.model = model;
         this.productionDate = productionDate;
         this.weight = weight;

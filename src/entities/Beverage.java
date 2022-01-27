@@ -9,10 +9,10 @@ public class Beverage extends Product {
     private LocalDate expirationDateForBeverage;
     private List<Beverage> beverages = new ArrayList<>();
 
-    public Beverage() {
+    protected Beverage() {
     }
 
-    public Beverage(LocalDate expirationDateForBeverage) {
+    protected Beverage(LocalDate expirationDateForBeverage) {
         this.expirationDateForBeverage = expirationDateForBeverage;
     }
 

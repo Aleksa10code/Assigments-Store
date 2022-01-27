@@ -10,7 +10,7 @@ public abstract class Product {
     private int quantity;
     private LocalDate purchaseDate;
 
-    public Product() {
+    protected Product() {
 
     }
 

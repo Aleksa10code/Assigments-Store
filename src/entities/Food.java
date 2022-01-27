@@ -9,7 +9,7 @@ public class Food extends Product {
     private LocalDate expirationDateForFood;
     private List<Food> foods = new ArrayList<>();
 
-    public Food() {
+    protected Food() {
 
     }
 
