@@ -19,7 +19,6 @@ public class Appliance extends Product {
         this.model = model;
         this.productionDate = productionDate;
         this.weight = weight;
-
     }
 
     public Appliance(String model, LocalDate productionDate, double weight, String name, String brand, double price, int quantity, LocalDate purchaseDate) {
