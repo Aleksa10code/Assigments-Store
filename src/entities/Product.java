@@ -1,6 +1,6 @@
 package entities;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public abstract class Product {
 
@@ -8,13 +8,13 @@ public abstract class Product {
     private String brand;
     private double price;
     private int quantity;
-    private Date purchaseDate;
+    private LocalDate purchaseDate;
 
     public Product() {
 
     }
 
-    protected Product(String name, String brand, double price, int quantity, Date purchaseDate) {
+    protected Product(String name, String brand, double price, int quantity, LocalDate purchaseDate) {
         this.name = name;
         this.brand = brand;
         this.price = price;
@@ -54,11 +54,11 @@ public abstract class Product {
         this.quantity = quantity;
     }
 
-    public Date getPurchaseDate() {
+    public LocalDate getPurchaseDate() {
         return purchaseDate;
     }
 
-    public void setPurchaseDate(Date purchaseDate) {
+    public void setPurchaseDate(LocalDate purchaseDate) {
         this.purchaseDate = purchaseDate;
     }
 }

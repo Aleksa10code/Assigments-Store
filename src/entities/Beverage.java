@@ -1,31 +1,31 @@
 package entities;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class Beverage extends Product {
 
-    private Date expirationDateForBeverage;
-    List<Beverage> beverages = new ArrayList<>();
+    private LocalDate expirationDateForBeverage;
+    private List<Beverage> beverages = new ArrayList<>();
 
     public Beverage() {
     }
 
-    public Beverage(Date expirationDateForBeverage) {
+    public Beverage(LocalDate expirationDateForBeverage) {
         this.expirationDateForBeverage = expirationDateForBeverage;
     }
 
-    public Beverage(Date expirationDateForBeverage, String name, String brand, double price, int quantity, Date purchaseDate) {
+    public Beverage(LocalDate expirationDateForBeverage, String name, String brand, double price, int quantity, LocalDate purchaseDate) {
         super(name, brand, price, quantity, purchaseDate);
         this.expirationDateForBeverage = expirationDateForBeverage;
     }
 
-    public Date getExpirationDateForBeverage() {
+    public LocalDate getExpirationDateForBeverage() {
         return expirationDateForBeverage;
     }
 
-    public void setExpirationDateForBeverage(Date expirationDateForBeverage) {
+    public void setExpirationDateForBeverage(LocalDate expirationDateForBeverage) {
         this.expirationDateForBeverage = expirationDateForBeverage;
     }
 

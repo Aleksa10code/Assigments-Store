@@ -1,14 +1,14 @@
 package entities;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class Clothing extends Product {
 
     private Size size;
     private String color;
-    List<Clothing> clothes = new ArrayList<>();
+    private List<Clothing> clothes = new ArrayList<>();
 
     public Clothing() {
 
@@ -19,7 +19,7 @@ public class Clothing extends Product {
         this.color = color;
     }
 
-    public Clothing(Size size, String color, String name, String brand, double price, int quantity, Date purchaseDate) {
+    public Clothing(Size size, String color, String name, String brand, double price, int quantity, LocalDate purchaseDate) {
         super(name, brand, price, quantity, purchaseDate);
         this.size = size;
         this.color = color;

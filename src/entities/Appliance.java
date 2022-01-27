@@ -1,28 +1,28 @@
 package entities;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class Appliance extends Product {
 
     private String model;
-    private Date productionDate;
+    private LocalDate productionDate;
     private double weight;
-    List<Appliance> appliances = new ArrayList<>();
+    private List<Appliance> appliances = new ArrayList<>();
 
     public Appliance() {
 
     }
 
-    public Appliance(String model, Date productionDate, double weight, Week week) {
+    public Appliance(String model, LocalDate productionDate, double weight) {
         this.model = model;
         this.productionDate = productionDate;
         this.weight = weight;
 
     }
 
-    public Appliance(String model, Date productionDate, double weight, String name, String brand, double price, int quantity, Date purchaseDate) {
+    public Appliance(String model, LocalDate productionDate, double weight, String name, String brand, double price, int quantity, LocalDate purchaseDate) {
         super(name, brand, price, quantity, purchaseDate);
         this.model = model;
         this.productionDate = productionDate;
@@ -37,11 +37,11 @@ public class Appliance extends Product {
         this.model = model;
     }
 
-    public Date getProductionDate() {
+    public LocalDate getProductionDate() {
         return productionDate;
     }
 
-    public void setProductionDate(Date productionDate) {
+    public void setProductionDate(LocalDate productionDate) {
         this.productionDate = productionDate;
     }
 
